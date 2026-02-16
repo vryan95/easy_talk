@@ -7,14 +7,14 @@ module EasyTalk
     # Builder class for number properties.
     class NumberBuilder < BaseBuilder
       VALID_OPTIONS = {
-        multiple_of: { type: T.any(Integer, Float), key: :multipleOf },
-        minimum: { type: T.any(Integer, Float), key: :minimum },
-        maximum: { type: T.any(Integer, Float), key: :maximum },
-        exclusive_minimum: { type: T.any(Integer, Float), key: :exclusiveMinimum },
-        exclusive_maximum: { type: T.any(Integer, Float), key: :exclusiveMaximum },
-        enum: { type: T::Array[T.any(Integer, Float)], key: :enum },
-        const: { type: T.any(Integer, Float), key: :const },
-        default: { type: T.any(Integer, Float), key: :default }
+        multiple_of: { type: T.any(Integer, Float, BigDecimal), key: :multipleOf },
+        minimum: { type: T.any(Integer, Float, BigDecimal), key: :minimum },
+        maximum: { type: T.any(Integer, Float, BigDecimal), key: :maximum },
+        exclusive_minimum: { type: T.any(Integer, Float, BigDecimal), key: :exclusiveMinimum },
+        exclusive_maximum: { type: T.any(Integer, Float, BigDecimal), key: :exclusiveMaximum },
+        enum: { type: T::Array[T.any(Integer, Float, BigDecimal)], key: :enum },
+        const: { type: T.any(Integer, Float, BigDecimal), key: :const },
+        default: { type: T.any(Integer, Float, BigDecimal), key: :default }
       }.freeze
 
       # Initializes a new instance of the NumberBuilder class.
